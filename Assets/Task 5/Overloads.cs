@@ -24,11 +24,7 @@ public class Overloads : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.LeftControl))      //On this frame, we are HOLDING control
             {
-                Jump(true);
-            }
-            else if (Input.GetKey(KeyCode.LeftShift))
-            {
-                Jump(5);
+                //Jump(true);
             }
             else
             {
@@ -37,25 +33,9 @@ public class Overloads : MonoBehaviour
         }
     }
 
-    void Jump()
+    public void Jump()
     {
         GetComponent<Rigidbody>().velocity = Vector3.up * jumpForce;
     }
 
-    void Jump(bool crouching)
-    {
-        if (crouching)
-        {
-            GetComponent<Rigidbody>().velocity = Vector3.up * (jumpForce + 3);
-        }
-        else
-        {
-            Jump();
-        }
-    }
-
-    void Jump(float speed)
-    {
-       GetComponent<Rigidbody>().velocity = Vector3.up * jumpForce + Vector3.right * speed;
-    }
 }

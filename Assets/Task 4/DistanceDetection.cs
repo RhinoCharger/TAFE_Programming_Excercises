@@ -26,10 +26,5 @@ public class DistanceDetection : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.right * Time.deltaTime);
-
-        if (Vector3.Distance(transform.position, otherSphere.position) < range)
-        {
-            transform.Translate(Vector3.right * Time.deltaTime);
-        }
     }
 }

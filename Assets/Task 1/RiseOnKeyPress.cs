@@ -22,38 +22,22 @@ public class RiseOnKeyPress : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.Translate(Vector3.up * 0.01f);
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            transform.Translate(Vector3.up * 0.01f);
+        }
 
-        ///What this does is gets the WS or Up/Down arrows and outputs a number from -1 to +1
-        transform.Translate(Vector3.up * Input.GetAxis("Vertical") * 0.01f);
-
-        Debug.Log(Input.GetAxis("Horizontal"));
-   
-        /// Get the transform component
-        /// "Translate" the transform, which is to say "move it"
-        /// In the direction of "upwards"
-        /// Multiplied by the vertical input axis (up/down arrows or W/S keys)
-        /// multipled by 0.01
-
-
-
-
-
-        //if (Input.GetKey(KeyCode.UpArrow))
-        //{
-        //    transform.Translate(Vector3.up * 0.01f);
-        //}
-        //if (Input.GetKey(KeyCode.W))
-        //{
-        //    transform.Translate(Vector3.up * 0.01f);
-        //}
-
-        //if (Input.GetKey(KeyCode.DownArrow))
-        //{
-        //    transform.Translate(Vector3.down * 0.01f);
-        //}
-        //if (Input.GetKey(KeyCode.S))
-        //{
-        //    transform.Translate(Vector3.down * 0.01f);
-        //}
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.Translate(Vector3.down * 0.01f);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(Vector3.down * 0.01f);
+        }
     }
 }

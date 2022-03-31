@@ -16,27 +16,25 @@ public class UnwrappedLoop : MonoBehaviour
 {
 
     public GameObject sphere;
-    public int spheresSpawned;  //How many in total have been spawnee
-    public int loopTimes = 4;  //How many appear when I press space.
 
     void Start()
     {
-        //for (int i = 0; i < 10; i++)
-        //{
-        //    Instantiate(sphere, new Vector3(0, i, 0), Quaternion.identity);
-        //}
+        Instantiate(sphere, new Vector3(0, 0, 0), Quaternion.identity);
+        Instantiate(sphere, new Vector3(0, 1, 0), Quaternion.identity);
+        Instantiate(sphere, new Vector3(0, 2, 0), Quaternion.identity);
+        Instantiate(sphere, new Vector3(0, 3, 0), Quaternion.identity);
+        Instantiate(sphere, new Vector3(0, 4, 0), Quaternion.identity);
+        Instantiate(sphere, new Vector3(0, 5, 0), Quaternion.identity);
+        Instantiate(sphere, new Vector3(0, 6, 0), Quaternion.identity);
+        Instantiate(sphere, new Vector3(0, 7, 0), Quaternion.identity);
+        Instantiate(sphere, new Vector3(0, 8, 0), Quaternion.identity);
+        Instantiate(sphere, new Vector3(0, 9, 0), Quaternion.identity);
+        Instantiate(sphere, new Vector3(0, 10, 0), Quaternion.identity);
     }
 
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            for (int i = 0; i < loopTimes; i++)
-            {
-                Instantiate(sphere, new Vector3(0, spheresSpawned, 0), Quaternion.identity);
-                spheresSpawned++;
-            }
-        }
+        
     }
 }
